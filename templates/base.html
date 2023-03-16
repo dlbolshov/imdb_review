@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David's predictions</title>
+<link href='https://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/css/demo.css'>
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="large-header" class="large-header">
+  <canvas id="demo-canvas"></canvas>
+    <h1 class="main-title">David's <span class="thin">predictions</span></h1>
+  
+  <div class="main-logic" id="main-logic"> 
+    <form name="message" id="message" action="{% url 'prediction' %}" method="post">
+      {% csrf_token %}
+      <label class="text_input_label" for="usermsg">Enter review text to get prediction:</label><br/>
+      <textarea class="text_input" name="usermsg" id="usermsg" placeholder="Some text" autocomplete="off" type="text" required></textarea></br>
+      <input class="submitmsg" name="submitmsg" type="submit" id="submitmsg" value="submit"/>
+    </form>
+  </div>
+  
+  <div class="output_deactive">
+    <h1 id="output1">{{prediction}}</h1>
+    <h1 id="output2">{{prediction_bin}}</h1>
+  </div>
+</div>
+
+<!-- partial -->
+<script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js'></script>
+<script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js'></script>
+<script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js'></script>
+<script src="{% static 'app.js' %}"></script>
+<script type="text/javascript">var trigger = "{{prediction}}"</script>
+
+</body>
+</html>

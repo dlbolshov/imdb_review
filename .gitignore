@@ -1,0 +1,5 @@
+__pycache__
+myvenv
+db.sqlite3
+.DS_Store
+/models/model_15_1e5/pytorch_model.bin

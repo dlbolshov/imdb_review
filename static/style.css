@@ -1,0 +1,138 @@
+/* Header */
+.large-header {
+  position: relative;
+  width: 100%;
+  background: #333;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+}
+#large-header {
+  background-image: url("https://i.pinimg.com/originals/8d/2a/f1/8d2af102a83186fc8cd0f2ba3ca60177.jpg");
+}
+.main-title {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  color: #f9f1e9;
+  text-align: center;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.main-logic {
+  position: absolute;
+  margin: 1;
+  padding: 0;
+  color: #f9f1e9;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+.text_input_label {
+  font-size: 1.2em;
+}
+.text_input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 40em;
+  height: 15em;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 10px #000000;
+  -moz-box-shadow: 0px 0px 10px #000000;
+  box-shadow: 0px 0px 10px #000000;
+  background-image: -moz-linear-gradient(-45deg, #800080 10%, #0000CD);
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.1, #800080), color-stop(1.0, #0000CD));
+  border: 0px solid #000000;
+  background-color: #000000;
+  padding: 10px;
+  font-family: 'Raleway';
+  font-size: 1.2em;
+  color: #DAD3CC;
+  text-align: center;
+  outline: 0px solid #000000;
+  opacity: 0.85;
+}
+input[type=submit] {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 10px #000000;
+  -moz-box-shadow: 0px 0px 10px #000000;
+  box-shadow: 0px 0px 10px #000000;
+  background-image: -moz-linear-gradient(-45deg, #800080 10%, #0000CD);
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.1, #800080), color-stop(1.0, #0000CD));
+  border: 0px solid #000000;
+  background-color: #000000;
+  padding: 10px;
+  font-family: 'Raleway';
+  font-size: 1.2em;
+  color: #DAD3CC;
+  text-align: center;
+  outline: 0px solid #000000;
+  cursor:pointer;
+}
+
+input[type=submit]:hover {
+  background-image: -moz-linear-gradient(-45deg, #500050 10%, #0000a0);
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.1, #500050), color-stop(1.0, #0000a0));
+}
+
+.demo-1 .main-title {
+  text-transform: uppercase;
+  font-size: 4.2em;
+  letter-spacing: 0.1em;
+}
+.main-title .thin {
+  font-weight: 200;
+}
+@media only screen and (max-width: 768px) {
+  .demo-1 .main-title .main-logic {
+    font-size: 3em;
+  }
+}
+
+#output1 {
+  color: #f9f1e9;
+  font-family: 'Raleway';
+  font-weight: 100;
+}
+
+#output2 {
+  color: #f9f1e9;
+  font-family: 'Raleway';
+  font-weight: 100
+}
+
+.output_deactive {
+  position: absolute;
+  margin: 1;
+  padding: 0;
+  text-align: center;
+  top: 90%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  opacity: 0;
+}
+
+.output_active {
+  position: absolute;
+  margin: 1;
+  padding: 0;
+  text-align: center;
+  top: 90%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  opacity: 1;
+  transition: opacity 5s; 
+}
