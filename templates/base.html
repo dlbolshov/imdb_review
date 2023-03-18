@@ -15,8 +15,8 @@
 <div id="large-header" class="large-header">
   <canvas id="demo-canvas"></canvas>
     <h1 class="main-title">David's <span class="thin">predictions</span></h1>
-  
-  <div class="main-logic" id="main-logic"> 
+
+  <div class="main-logic" id="main-logic">
     <form name="message" id="message" action="{% url 'prediction' %}" method="post">
       {% csrf_token %}
       <label class="text_input_label" for="usermsg">Enter review text to get prediction:</label><br/>
@@ -24,9 +24,9 @@
       <input class="submitmsg" name="submitmsg" type="submit" id="submitmsg" value="submit"/>
     </form>
   </div>
-  
+
   <div class="output_deactive">
-    <h1 id="output1">{{prediction}}</h1>
+    <h1 id="output1">Rating: {{prediction}}</h1>
     <h1 id="output2">{{prediction_bin}}</h1>
   </div>
 </div>
